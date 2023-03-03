@@ -14,6 +14,7 @@ export async function asrt() {
     const resultArr = [];
     page.on('console', async e => {
         const args = await Promise.all(e.args().map(a => a.jsonValue()));
+        console.log(args);
         if (e.type() === ('assert' || 'error')) {
             resultArr.push(e);
         }

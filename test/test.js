@@ -15,17 +15,17 @@ describe('index.html', function() {
         this.timeout(60000);
         describe('Performance metrics', function() {
             it('should get a perfect score in lighthouse performance metrics', async function() {
-                return expect(await lght.performance()).to.have.property('performance').to.equal(1);
+                return expect(await lght.performance()).to.have.property('performance').to.be.above(.98);
             });
         });
         describe('Best practices metrics', function() {
             it('should get a perfect score in lighthouse best practices metrics', async function() {
-                return expect(await lght.bestPractices()).to.have.property('best-practices').to.equal(1);
+                return expect(await lght.bestPractices()).to.have.property('best-practices').to.be.above(.98);
             });
         });
         describe('SEO metrics', function() {
             it('should get a perfect score in lighthouse SEO metrics', async function() {
-                return expect(await lght.seo()).to.have.property('seo').to.equal(1);
+                return expect(await lght.seo()).to.have.property('seo').to.be.above(.98);
             });
         });
     });

@@ -68,7 +68,7 @@ export async function bestPractices() {
         output: 'json',
         onlyCategories: ['best-practices']
     });
-    console.log(JSON.stringify(lhr.categories));
+    
     const structuredResultObj = {};
 
     const structuredResult = Object.keys(lhr.categories).forEach(cat => {
