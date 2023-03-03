@@ -1,10 +1,10 @@
-const puppeteer = require('puppeteer'),
-    express = require('express'),
-    app = express(),
+import express from 'express';
+import puppeteer from 'puppeteer';
+const app = express(),
     port = 4325;
 
 
-module.exports = asrt = async () => {
+export async function asrt() {
     app.use(express.static('public'));
 
     const server = app.listen(port, () => console.log(`AR Server listening on port: ${port}`));
